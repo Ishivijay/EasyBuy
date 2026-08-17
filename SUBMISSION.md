@@ -1,5 +1,7 @@
 # EasyBuy — submission
 
+**Demo video:** https://youtu.be/dt06IemjrnI
+**Repository:** https://github.com/Ishivijay/EasyBuy
 **Track:** Apparel Virtual Try-On
 **YouCam API used:** Apparel VTO (AI Clothes) — `POST /s2s/v2.0/file/cloth`, `POST /s2s/v2.0/task/cloth`, `GET /s2s/v2.0/task/cloth/{task_id}`, plus `GET /s2s/v1.0/client/credit` for the unit balance shown in-app.
 

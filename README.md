@@ -222,7 +222,7 @@ server-side fetch.
 
 A 1 minute 18 second walkthrough, recorded on a real phone:
 
-**▶ https://youtu.be/YOUR_VIDEO_ID**
+**▶ https://youtu.be/dt06IemjrnI**
 
 It covers setup, sharing a live Zara link, the render, drag-to-compare, the zoom views, keep/pass,
 the Wardrobe, and the privacy controls.
