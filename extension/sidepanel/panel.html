@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>EasyBuy</title>
+    <link rel="stylesheet" href="panel.css" />
+  </head>
+  <body>
+    <header class="bar">
+      <span class="wordmark">EasyBuy</span>
+      <span id="status" class="status" data-state="unknown">checking proxy…</span>
+    </header>
+
+    <main>
+      <!-- Step 1: the photo everything is rendered onto -->
+      <section class="card" id="model-card">
+        <div class="card-head">
+          <h2>Your photo</h2>
+          <button class="link" id="change-model" hidden>change</button>
+        </div>
+
+        <label class="dropzone" id="dropzone">
+          <input type="file" id="model-input" accept="image/*" hidden />
+          <img id="model-thumb" alt="" hidden />
+          <div class="dropzone-copy" id="dropzone-copy">
+            <strong>Drop a full-body photo</strong>
+            <span>Front-facing, plain background works best. Stored on your machine.</span>
+          </div>
+        </label>
+      </section>
+
+      <!-- Step 2: what the current tab is selling -->
+      <section class="card" id="garment-card">
+        <div class="card-head">
+          <h2>This page</h2>
+          <span class="chip" id="garment-source" hidden></span>
+        </div>
+
+        <div id="garment-empty" class="empty">
+          Open a product page on any store, then reopen this panel.
+        </div>
+
+        <div id="garment-body" hidden>
+          <div class="garment-row">
+            <img id="garment-thumb" alt="" />
+            <div class="garment-meta">
+              <p class="garment-title" id="garment-title"></p>
+              <p class="garment-price" id="garment-price"></p>
+              <p class="garment-host" id="garment-host"></p>
+            </div>
+          </div>
+
+          <div class="candidates" id="candidates" hidden>
+            <span class="candidates-label">Wrong image?</span>
+            <div class="candidate-strip" id="candidate-strip"></div>
+          </div>
+
+          <div class="controls">
+            <label class="field">
+              <span>Fit</span>
+              <select id="category">
+                <option value="upper_body">Top</option>
+                <option value="lower_body">Bottom</option>
+                <option value="full_body">Full body / dress</option>
+              </select>
+            </label>
+            <button class="primary" id="render">Try it on</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 3: the render -->
+      <section class="card" id="result-card" hidden>
+        <div class="card-head">
+          <h2>Result</h2>
+          <div class="head-actions">
+            <button class="link" id="toggle-compare">show original</button>
+            <button class="link" id="rerender">re-render</button>
+          </div>
+        </div>
+        <figure class="result">
+          <img id="result-img" alt="You wearing the selected garment" />
+          <figcaption id="result-caption"></figcaption>
+        </figure>
+      </section>
+
+      <section class="card" id="progress-card" hidden>
+        <div class="progress">
+          <div class="spinner"></div>
+          <div>
+            <p id="progress-stage">Starting…</p>
+            <p class="muted" id="progress-detail"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card error" id="error-card" hidden>
+        <h2>That did not work</h2>
+        <p id="error-message"></p>
+        <details id="error-detail-wrap" hidden>
+          <summary>Details</summary>
+          <pre id="error-detail"></pre>
+        </details>
+      </section>
+
+      <!-- Step 4: everything tried, across every store -->
+      <section class="card" id="tray-card" hidden>
+        <div class="card-head">
+          <h2>Compare</h2>
+          <span class="muted" id="tray-count"></span>
+        </div>
+        <div class="tray" id="tray"></div>
+      </section>
+    </main>
+
+    <script src="panel.js" type="module"></script>
+  </body>
+</html>

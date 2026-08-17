@@ -1,0 +1,42 @@
+/* Deliberately high specificity and a reset-ish base: this button lands inside
+   someone else's stylesheet and must not inherit their button styling. */
+#easybuy-tryon-pill {
+  all: unset;
+  box-sizing: border-box;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2147483000;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  font: 600 14px/1 ui-sans-serif, -apple-system, "Segoe UI", system-ui, sans-serif;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.28);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#easybuy-tryon-pill::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #7cf6c0;
+}
+
+#easybuy-tryon-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34);
+}
+
+@media (prefers-color-scheme: dark) {
+  #easybuy-tryon-pill {
+    background: #f4f4f5;
+    color: #111;
+  }
+}

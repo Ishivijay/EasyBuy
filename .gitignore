@@ -1,0 +1,36 @@
+# Secrets — the YouCam API key lives here and must never be committed
+backend/.env
+.env
+*.pem
+*.key
+
+# User data: uploaded photos and rendered try-ons
+backend/data/
+
+# Node
+node_modules/
+
+# Flutter / Dart
+mobile/build/
+mobile/.dart_tool/
+mobile/.flutter-plugins
+mobile/.flutter-plugins-dependencies
+mobile/.packages
+mobile/pubspec.lock
+
+# Android
+mobile/android/.gradle/
+mobile/android/local.properties
+mobile/android/app/debug/
+mobile/android/app/profile/
+mobile/android/app/release/
+*.apk
+*.aab
+*.jks
+*.keystore
+
+# Misc
+*.log
+.DS_Store
+.idea/
+.vscode/

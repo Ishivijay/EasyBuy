@@ -1,0 +1,19 @@
+{
+  "name": "easybuy-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local proxy that holds the YouCam API key and drives Apparel VTO tasks for EasyBuy.",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "verify": "node scripts/verify.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
